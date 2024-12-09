@@ -49,7 +49,7 @@
         },
         {
           "name": "keyword.moonbit",
-          "match": "\\b(type!|(type|typealias|let|enum|struct|import|trait|derive|test|impl|with)\\b)"
+          "match": "\\b(type!|(type|typealias|let|const|enum|struct|import|trait|derive|test|impl|with)\\b)"
         },
         {
           "name": "variable.language.moonbit",
