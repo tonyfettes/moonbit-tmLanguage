@@ -93,7 +93,27 @@
       "patterns": [
         {
           "name": "comment.line",
-          "match": "//.*"
+          "match": "//[^/].*"
+        },
+        {
+          "name": "comment.block.documentation.moonbit",
+          "begin": "///",
+          "while": "///",
+          "patterns": [
+            {
+              "begin": "\\s*```",
+              "end": "\\s*```",
+              "beginCaptures": {
+                "0": { "name": "markup.fenced_code.block.markdown" }
+              },
+              "endCaptures": {
+                "0": { "name": "markup.fenced_code.block.markdown" }
+              },
+              "patterns": [{ "include": "$self" }],
+              "name": "meta.embedded.line.moonbit"
+            },
+            { "name": "comment.block.documentation.moonbit", "match": ".*" }
+          ]
         }
       ]
     },
@@ -255,7 +275,7 @@
       "patterns": [
         {
           "comment": "function/method definitions",
-          "match": "\\b(fn)\\s*(?:([A-Z][A-Za-z0-9_]*)::)?([a-z0-9_][A-Za-z0-9_]*)?\\b",
+          "match": "\\b(fn)\\b\\s*(?:([A-Z][A-Za-z0-9_]*)::)?([a-z0-9_][A-Za-z0-9_]*)?\\b",
           "captures": {
             "1": {
               "name": "keyword.moonbit"
