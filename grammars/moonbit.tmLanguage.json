@@ -237,7 +237,15 @@
         },
         {
           "name": "constant.numeric.moonbit",
-          "match": "\\b0[XxOoBb][\\dAaBbCcDdEeFf]+(U)?(L)?\\b"
+          "match": "\\b\\d[\\d_]*(\\.)[\\d_]+[Ee][+-]?\\d[\\d_]+\\b"
+        },
+        {
+          "name": "constant.numeric.moonbit",
+          "match": "\\b0[XxOoBb][\\dAaBbCcDdEeFf_]+(U)?(L)?(?!\\.)\\b"
+        },
+        {
+          "name": "constant.numeric.moonbit",
+          "match": "\\b0[Xx][\\dAaBbCcDdEeFf_]+(\\.)[\\dAaBbCcDdEeFf_]+[Pp][+-]?[\\dAaBbCcDdEeFf_]+\\b"
         },
         {
           "name": "constant.language.moonbit",
