@@ -77,11 +77,15 @@
         },
         {
           "name": "keyword.operator.comparison.moonbit",
-          "match": "(===|==|!=|>=|<=|(?<!-)>|<)"
+          "match": "(===|==|!=|>=|<=|(?<!-)(?<!\\|)>(?!>)|<(?!<))"
         },
         {
           "name": "keyword.operator.logical.moonbit",
           "match": "(\\bnot\\b|&&|\\|\\|)"
+        },
+        {
+          "name": "keyword.operator.bitwise.moonbit",
+          "match": "(\\|(?!\\|)(?!>)|&(?!&)|\\^|<<|>>)"
         },
         {
           "name": "keyword.operator.math.moonbit",
