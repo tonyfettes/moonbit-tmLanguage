@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "test": "vscode-tmgrammar-test -g grammars/moonbit.tmLanguage.json 'tests/**/*.mbt'"
+  },
+  "devDependencies": {
+    "vscode-tmgrammar-test": "^0.1.3"
+  }
+}
