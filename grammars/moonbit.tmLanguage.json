@@ -52,7 +52,7 @@
         },
         {
           "name": "keyword.moonbit",
-          "match": "\\b(type!|(type|typealias|let|const|enum|struct|import|trait|traitalias|derive|test|impl|with)\\b)"
+          "match": "\\b(type!|(type|typealias|let|const|enum|struct|import|trait|traitalias|derive|test|impl|with|fnalias)\\b)"
         },
         {
           "name": "variable.language.moonbit",
@@ -267,6 +267,10 @@
         },
         {
           "name": "constant.numeric.moonbit",
+          "match": "\\b\\d+(\\.)"
+        },
+        {
+          "name": "constant.numeric.moonbit",
           "match": "\\b\\d+(\\.)\\d+\\b"
         },
         {
@@ -279,11 +283,19 @@
         },
         {
           "name": "constant.numeric.moonbit",
+          "match": "\\b0[Xx][\\dAaBbCcDdEeFf_]+(\\.)"
+        },
+        {
+          "name": "constant.numeric.moonbit",
+          "match": "\\b0[Xx][\\dAaBbCcDdEeFf_]+(\\.)[\\dAaBbCcDdEeFf_]+\\b"
+        },
+        {
+          "name": "constant.numeric.moonbit",
           "match": "\\b0[Xx][\\dAaBbCcDdEeFf_]+(\\.)[\\dAaBbCcDdEeFf_]+[Pp][+-]?[\\dAaBbCcDdEeFf_]+\\b"
         },
         {
           "name": "constant.language.moonbit",
-          "match": "\\b(true|false|\\(\\))\\b"
+          "match": "\\b(true|false)\\b"
         }
       ]
     },
