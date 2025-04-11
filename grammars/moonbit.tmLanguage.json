@@ -259,7 +259,7 @@
       "patterns": [
         {
           "name": "constant.numeric.moonbit",
-          "match": "\\b\\d(\\d|_)*(?!\\.)(U)?(L)?\\b"
+          "match": "\\b\\d(\\d|_)*(?!\\.)((U)?(L)?|N?)\\b"
         },
         {
           "name": "constant.numeric.moonbit",
@@ -267,31 +267,19 @@
         },
         {
           "name": "constant.numeric.moonbit",
-          "match": "\\b\\d+(\\.)"
+          "match": "\\b\\d+(?=\\.\\.)"
         },
         {
           "name": "constant.numeric.moonbit",
-          "match": "\\b\\d+(\\.)\\d+\\b"
+          "match": "\\b\\d[\\d_]*\\.[\\d_]*([Ee][+-]?\\d[\\d_]*\\b)?"
         },
         {
           "name": "constant.numeric.moonbit",
-          "match": "\\b\\d[\\d_]*(\\.)[\\d_]+[Ee][+-]?\\d[\\d_]+\\b"
+          "match": "\\b0[Oo][0-7][0-7]*((U)?(L)?|N?)\\b"
         },
         {
           "name": "constant.numeric.moonbit",
-          "match": "\\b0[XxOoBb][\\dAaBbCcDdEeFf_]+(U)?(L)?(?!\\.)\\b"
-        },
-        {
-          "name": "constant.numeric.moonbit",
-          "match": "\\b0[Xx][\\dAaBbCcDdEeFf_]+(\\.)"
-        },
-        {
-          "name": "constant.numeric.moonbit",
-          "match": "\\b0[Xx][\\dAaBbCcDdEeFf_]+(\\.)[\\dAaBbCcDdEeFf_]+\\b"
-        },
-        {
-          "name": "constant.numeric.moonbit",
-          "match": "\\b0[Xx][\\dAaBbCcDdEeFf_]+(\\.)[\\dAaBbCcDdEeFf_]+[Pp][+-]?[\\dAaBbCcDdEeFf_]+\\b"
+          "match": "\\b0[Xx][\\dAaBbCcDdEeFf][\\dAaBbCcDdEeFf_]*((U|L|UL|N)\\b|\\.[\\da-fA-F_]*([Pp][+-]?[\\da-fA-F_]+\\b)?)?"
         },
         {
           "name": "constant.language.moonbit",
