@@ -17,7 +17,7 @@ fn main {
   0x1.p+1 |> ignore()
   // <------- constant.numeric.moonbit
   let buffer = StringBuilder::new()
-  1..output(buffer) |> ignore()
+  1..output(buffer)
   1.1_1 |> ignore()
   // <----- constant.numeric.moonbit
   1_1.2_2 |> ignore()
