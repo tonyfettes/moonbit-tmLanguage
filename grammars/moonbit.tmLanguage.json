@@ -47,12 +47,16 @@
     "keywords": {
       "patterns": [
         {
+          "name": "keyword.control.moonbit.async",
+          "match": "\\b(async)\\b"
+        },
+        {
           "name": "keyword.control.moonbit",
-          "match": "\\b(guard|if|while|break|continue|return|try|catch|except|raise|match|else|as|in|is|loop|for|async)\\b"
+          "match": "\\b(guard|if|while|break|continue|return|try|catch|except|raise|match|using|else|as|in|is|loop|for|async)\\b"
         },
         {
           "name": "keyword.moonbit",
-          "match": "\\b(type!|(type|typealias|let|const|enum|struct|import|trait|traitalias|derive|test|impl|with|fnalias|recur)\\b)"
+          "match": "\\b(type!|(type|typealias|let|const|enum|struct|import|trait|traitalias|derive|test|impl|with|fnalias|recur|suberror)\\b)"
         },
         {
           "name": "variable.language.moonbit",
@@ -356,6 +360,9 @@
               "include": "#constants"
             },
             {
+              "include": "#keywords"
+            },
+            {
               "include": "#functions"
             },
             {
@@ -363,9 +370,6 @@
             },
             {
               "include": "#types"
-            },
-            {
-              "include": "#keywords"
             },
             {
               "include": "#modules"
